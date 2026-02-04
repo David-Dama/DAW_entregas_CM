@@ -80,8 +80,12 @@ public class GestionReserva {
     }
     
     public static void mostrarReservas() {
-        for (int i = 0; i < Reserva.getNumReserva(); i++) {
-            System.out.println(reservas[i]);
+        if (Reserva.getNumReserva() == 0) {
+            System.out.println("No hay reservas que mostrar");
+        } else {
+            for (int i = 0; i < Reserva.getNumReserva(); i++) {
+                System.out.println(reservas[i]);
+            }
         }
     }
     
